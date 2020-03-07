@@ -19,7 +19,7 @@ an empty Python package. Features include:
 - Code style checking,
 - [Editorconfig]({{cookiecutter.project_slug}}/.editorconfig),
 - Miscellaneous files, such as [Change log]({{cookiecutter.project_slug}}/CHANGELOG.rst), [Code of Conduct]({{cookiecutter.project_slug}}/CODE_OF_CONDUCT.rst), and [Contributing guidelines]({{cookiecutter.project_slug}}/CONTRIBUTING.rst),
-- A [README]({{cookiecutter.project_slug}}/README.rst) and [a separate document]({{cookiecutter.project_slug}}/project_setup.rst) with extensive documentation about project setup.
+- A [README]({{cookiecutter.project_slug}}/README.md) and [a separate document]({{cookiecutter.project_slug}}/project_setup.md) with extensive documentation about project setup.
 
 The file structure of the generated package looks like:
 
@@ -33,9 +33,11 @@ path/to/package/
 ├── CODE_OF_CONDUCT.rst
 ├── CONTRIBUTING.rst
 ├── docs
-│   ├── conf.py
-│   ├── index.rst
-│   └── ...
+│   ├── MAKEFILE
+│   └── source
+│       ├── conf.py
+│       ├── index.rst
+│       └── ...
 ├── LICENSE
 ├── MANIFEST.in
 ├── NOTICE
@@ -43,8 +45,8 @@ path/to/package/
 │   ├── __init__.py
 │   ├── __version__.py
 │   └── package.py
-├── README.rst
-├── project_setup.rst
+├── README.md
+├── project_setup.md
 ├── requirements.txt
 ├── setup.cfg
 ├── setup.py
@@ -57,7 +59,7 @@ path/to/package/
 * Code (existing or new) should be placed in `path/to/package/package/` (please choose a better name for your software!).
 * Add documentation by editing `path/to/package/docs/index.rst`
 * Tests go in the `path/to/package/tests/` directory
-* The generated [project setup document]({{cookiecutter.project_slug}}/project_setup.rst) contains extensive documentation about the project setup and provides further instructions on what to do.
+* The generated [project setup document]({{cookiecutter.project_slug}}/project_setup.md) contains extensive documentation about the project setup and provides further instructions on what to do.
 
 ## How to use
 
@@ -101,7 +103,7 @@ You will be asked to supply the following information:
 | github_organization       |   | GitHub organization that will contain this project's repository. This can also be your github user name. |
 | open_source_license       | Apache 2.0 (1)  | The software license under which the code is made available.  |
 | apidoc                    | no (1)  | Add support for automatically generating a module index from the `docstrings` in your Python package (look at the [scriptcwl package](http://scriptcwl.readthedocs.io/en/latest/apidocs/scriptcwl.html) for an example). |
-| pypi_user                 | no_travis_pypi_deployment | If you want to deploy your package via travis to pypi when you make a release, specify your pypi user name. If not, use the default value. Please note that if you are using this option, some additional configuration is required. The [README]({{cookiecutter.project_slug}}/README.rst) of the generated package explains what to do. |
+| pypi_user                 | no_travis_pypi_deployment | If you want to deploy your package via travis to pypi when you make a release, specify your pypi user name. If not, use the default value. Please note that if you are using this option, some additional configuration is required. The [README]({{cookiecutter.project_slug}}/README.md) of the generated package explains what to do. |
 | full_name                 | John Smith  | Your full name, e.g. _John Smith_.   |
 | email                     | yourname@esciencecenter.nl | Your (work) email address  |
 | copyright_holder          |   | Name(s) of the organization(s) or person(s) who hold the copyright of the software (e.g., Netherlands eScience Center).  |
