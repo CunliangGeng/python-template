@@ -89,7 +89,7 @@ cookiecutter for every new project.
 
 To create a new package, type:
 ```bash
-cookiecutter https://github.com/nlesc/python-template.git
+cookiecutter https://github.com/CunliangGeng/python-template.git
 ```
 
 You will be asked to supply the following information:
