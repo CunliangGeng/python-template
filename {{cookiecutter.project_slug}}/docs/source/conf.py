@@ -34,7 +34,20 @@ sys.path.insert(0, os.path.abspath(os.path.join(here, '..')))
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.napoleon']
+
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.napoleon',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.todo',
+    'sphinx.ext.autosummary',
+    'sphinx.ext.doctest',
+    'sphinx.ext.coverage',
+    'sphinx.ext.viewcode',
+    'sphinx.ext.autosectionlabel',
+    'IPython.sphinxext.ipython_directive',
+    'IPython.sphinxext.ipython_console_highlighting',
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -77,9 +90,6 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
 
-# If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = False
-
 {% if cookiecutter.apidoc == 'yes' %}
 # -- Run apidoc plug-in manually, as readthedocs doesn't support it -------
 # See https://github.com/rtfd/readthedocs.org/issues/1139
@@ -114,12 +124,52 @@ def setup(app):
     app.connect('builder-inited', run_apidoc)
 {% endif %}
 
+
+
+# -- Options for extensions -------------------------------------------------
+
+# Only the __init__ method’s docstring is inserted.
+autoclass_content = 'init'
+# order members by source code order
+autodoc_member_order = 'bysource'
+# Disable docstring inheritance
+autodoc_inherit_docstrings = False
+# mock the packges that is not avaiable on your machine
+# autodoc_mock_imports = ['cython', 'sqlalchemy', 'matplotlib',
+#                         'numpy', 'schema', 'tqdm', 'pandas']
+
+# napoleon
+napoleon_numpy_docstring = False
+napoleon_use_rtype = False
+
+# If true, `todo` and `todoList` produce output, else they produce nothing.
+todo_include_todos = True
+
+# intersphinx
+intersphinx_mapping = {
+    'python': ('https://docs.python.org/3', None),
+    'numpy': ('http://docs.scipy.org/doc/numpy/', None)
+}
+
+# autosummary
+# Make _autosummary files and include them
+autosummary_generate = True
+# autosummary_imported_members = True
+
+# ipython
+ipython_warning_is_error = False
+ipython_execlines = [
+    "import numpy as np",
+]
+
+
 # -- Options for HTML output ----------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_rtd_theme'
+# html_theme = 'sphinx_rtd_theme'
+html_theme = 'nature'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the

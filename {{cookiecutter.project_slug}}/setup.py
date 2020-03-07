@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import os
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 here = os.path.abspath(os.path.dirname(__file__))
 
@@ -11,7 +11,7 @@ version = {}
 with open(os.path.join(here, '{{ cookiecutter.project_slug.lower().replace(' ', '_').replace('-', '_') }}', '__version__.py')) as f:
     exec(f.read(), version)
 
-with open('README.rst') as readme_file:
+with open('README.md') as readme_file:
     readme = readme_file.read()
 
 {%- set license_classifiers = {
@@ -30,18 +30,17 @@ setup(
     author="{{ cookiecutter.full_name.replace('\"', '\\\"') }}",
     author_email='{{ cookiecutter.email }}',
     url='https://github.com/{{ cookiecutter.github_organization }}/{{ cookiecutter.project_slug }}',
-    packages=[
-        '{{ cookiecutter.project_slug.lower().replace(' ', '_').replace('-', '_')}}',
-    ],
-    include_package_data=True,
+    packages=find_packages(),
+    include_package_data=True,  # check MANIFEST.in
 {%- if cookiecutter.open_source_license in license_classifiers %}
     license="{{ cookiecutter.open_source_license }}",
 {%- endif %}
     zip_safe=False,
     keywords='{{ cookiecutter.project_slug }}',
-    classifiers=[
+    classifiers=[ #check details https://pypi.org/classifiers/
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
+        'Intended Audience :: Science/Research',
 {%- if cookiecutter.open_source_license in license_classifiers %}
         '{{ license_classifiers[cookiecutter.open_source_license] }}',
 {%- endif %}
@@ -50,23 +49,13 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Topic :: Scientific/Engineering :: Bio-Informatics',
     ],
-    test_suite='tests',
     install_requires=[],  # FIXME: add your package's dependencies to this list
-    setup_requires=[
-        # dependency for `python setup.py test`
-        'pytest-runner',
-        # dependencies for `python setup.py build_sphinx`
-        'sphinx',
-        'sphinx_rtd_theme',
-        'recommonmark'
-    ],
-    tests_require=[
-        'pytest',
-        'pytest-cov',
-        'pycodestyle',
-    ],
     extras_require={
-        'dev':  ['prospector[with_pyroma]', 'yapf', 'isort'],
+        'dev': ['prospector[with_pyroma]', 'autopep8', 'isort', 'twine'],
+        'doc': ['sphinx', 'ipython'],
+        'test': ['pytest', 'pytest-cov', 'pytest-runner', 'pycodestyle',
+                'coverage', 'codacy-coverage', 'coveralls'],
     }
 )
