@@ -7,8 +7,7 @@ Links to the relevant sections are included below. Feel free to remove
 this text when the development of the software package takes off.
 
 For a quick reference on software development, we refer to [the software
-guide
-checklist](https://guide.esciencecenter.nl/best_practices/checklist.html).
+guide checklist](https://guide.esciencecenter.nl/best_practices/checklist.html).
 
 Version control
 ---------------
@@ -43,14 +42,14 @@ for more information about Python versions.
 Package management and dependencies
 -----------------------------------
 
-You can use either [pip]{.title-ref} or [conda]{.title-ref} for
+You can use either `pip` or `conda` for
 installing dependencies and package management. This repository does not
 force you to use one or the other, as project requirements differ. For
 advice on what to use, please check [the relevant section of the
 guide](https://guide.esciencecenter.nl/best_practices/language_guides/python.html#dependencies-and-package-management).
 
--   Dependencies should be added to [setup.py]{.title-ref} in the
-    [install\_requires]{.title-ref} list.
+-   Dependencies should be added to `setup.py` in the
+    `install_requires` list.
 
 Packaging/One command install
 -----------------------------
@@ -127,7 +126,7 @@ Documentation
     safely removed (or you can just leave it there).
 -   To put the documentation on [Read the
     Docs](https://readthedocs.org), log in to your Read the Docs
-    account, and import the repository (under \'My Projects\').
+    account, and import the repository (under 'My Projects').
     -   Include the link to the documentation in this [README](https://guide.esciencecenter.nl/best_practices/language_guides/python.html#writingdocumentation).
 -   [Relevant section in the
     guide](https://guide.esciencecenter.nl/best_practices/language_guides/python.html#writingdocumentation)
@@ -151,15 +150,15 @@ Package version number
 -   For convenience, the package version is stored in a single place:
     `{{ cookiecutter.project_slug }}/__version__.py`. For updating the
     version number, you only have to change this file.
--   Don\'t forget to update the version number before [making a
+-   Don't forget to update the version number before [making a
     release](https://guide.esciencecenter.nl/best_practices/releases.html)!
 
 Logging
 -------
 
--   We recommend using the [logging]{.title-ref} module for getting
+-   We recommend using the `logging` module for getting
     useful information from your module (instead of using
-    [print]{.title-ref}).
+    `print`).
 -   The project is set up with a logging example.
 -   [Relevant section in the
     guide](https://guide.esciencecenter.nl/best_practices/language_guides/python.html#logging)
@@ -181,7 +180,7 @@ CITATION.cff
     citable](https://guide.esciencecenter.nl/citable_software/making_software_citable.html)
     section in the guide.
 
-CODE\_OF\_CONDUCT.rst
+CODE_OF_CONDUCT.rst
 ---------------------
 
 -   Information about how to behave professionally
