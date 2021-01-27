@@ -1,4 +1,8 @@
-# Netherlands eScience Center Python Template
+# Python Template
+
+This template is adapted from the Netherlands eScience Center Python Template.
+
+**Due to the big changes, do NOT try to sync it from the original repo.**
 
 [![RSD](https://img.shields.io/badge/rsd-python--template-00a3e3.svg)](https://research-software.nl/software/nlesc-python-template)
 [![Appveyor Build Status](https://ci.appveyor.com/api/projects/status/a99ph5fv1carejrr/branch/master?svg=true)](https://ci.appveyor.com/project/jvdzwaan/python-template/branch/master)
