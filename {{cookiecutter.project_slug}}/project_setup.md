@@ -84,25 +84,16 @@ Testing and code coverage
 -------------------------
 
 -   Tests should be put in the `tests` folder.
--   The `tests` folder contains:
-    -   Example tests that you should replace with your own meaningful
-        tests (file:
-        `test_{{ cookiecutter.project_slug.lower().replace(' ', '_').replace('-', '_')}}`)
-    -   A test that checks whether your code conforms to the Python
-        style guide (PEP 8) (file: `test_lint.py`)
 -   The testing framework used is [PyTest](https://pytest.org)
-    -   [PyTest
-        introduction](http://pythontesting.net/framework/pytest/pytest-introduction/)
+    -   [PyTest introduction](http://pythontesting.net/framework/pytest/pytest-introduction/)
 -   Tests can be run with `python setup.py test`
     -   This is configured in `setup.py` and `setup.cfg`
 -   Use [Travis CI](https://travis-ci.com/) to automatically run tests
     and to test using multiple Python versions
     -   Configuration can be found in `.travis.yml`
-    -   [Getting started with Travis
-        CI](https://docs.travis-ci.com/user/getting-started/)
+    -   [Getting started with Travis CI](https://docs.travis-ci.com/user/getting-started/)
 -   TODO: add something about code quality/coverage tool?
--   [Relevant section in the
-    guide](https://guide.esciencecenter.nl/best_practices/language_guides/python.html#testing)
+-   [Relevant section in the guide](https://guide.esciencecenter.nl/best_practices/language_guides/python.html#testing)
 
 Documentation
 -------------

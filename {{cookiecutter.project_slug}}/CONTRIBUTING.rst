@@ -59,7 +59,7 @@ You want to make some kind of change to the code base
 #. add your own tests (if necessary);
 #. update or expand the documentation;
 #. `push <http://rogerdudler.github.io/git-guide/>`_ your feature branch to
-   (your fork of) the {{ cookiecutter.project_name }} repository on GitHub;
+   your fork or the original repository.
 
 #. create the pull request, e.g. following the instructions
    `here <https://help.github.com/articles/creating-a-pull-request/>`__.

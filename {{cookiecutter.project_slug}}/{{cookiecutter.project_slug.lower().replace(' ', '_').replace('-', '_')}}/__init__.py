@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-{% if cookiecutter.apidoc == 'yes' %}"""Documentation about {{ cookiecutter.project_name }}"""{% endif %}
+{% if cookiecutter.apidoc == 'yes' %}"""Documentation about {{ cookiecutter.project_slug }}"""{% endif %}
 import logging
 
 from .__version__ import __version__
