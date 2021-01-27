@@ -1,4 +1,4 @@
-{{ cookiecutter.project_slug }}
+{{ cookiecutter.repo_name }}
 Copyright [year-year] {{ cookiecutter.copyright_holder }}
 
 This product includes software developed at

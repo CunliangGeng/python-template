@@ -1,4 +1,4 @@
-# {{ cookiecutter.project_name }}
+# {{ cookiecutter.repo_name }}
 
 {{ cookiecutter.project_short_description }}
 
@@ -8,11 +8,11 @@ the link to this document) if you don't need it.
 
 ## Installation
 
-To install {{ cookiecutter.project_slug }}, do:
+To install {{ cookiecutter.repo_name }}, do:
 
 ``` {.sourceCode .console}
-git clone https://github.com/{{ cookiecutter.github_organization }}/{{ cookiecutter.project_slug }}.git
-cd {{ cookiecutter.project_slug }}
+git clone https://github.com/{{ cookiecutter.github_organization }}/{{ cookiecutter.repo_name }}.git
+cd {{ cookiecutter.repo_name }}
 pip install .
 ```
 
@@ -29,7 +29,7 @@ Include a link to your project's full documentation here.
 ## Contributing
 
 If you want to contribute to the development of {{
-cookiecutter.project_name }}, have a look at the [contribution
+cookiecutter.repo_name }}, have a look at the [contribution
 guidelines](CONTRIBUTING.rst).
 
 ## License

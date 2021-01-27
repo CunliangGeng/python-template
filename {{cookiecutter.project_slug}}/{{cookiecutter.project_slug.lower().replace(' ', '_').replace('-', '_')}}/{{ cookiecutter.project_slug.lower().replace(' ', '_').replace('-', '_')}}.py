@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-{%-if cookiecutter.apidoc == 'yes' %}"""Documentation about the {{ cookiecutter.project_slug }} module."""{% endif %}
+{%-if cookiecutter.apidoc == 'yes' %}"""Documentation about the {{ cookiecutter.repo_name }} module."""{% endif %}
 import logging
 
 logger = logging.getLogger(__name__)

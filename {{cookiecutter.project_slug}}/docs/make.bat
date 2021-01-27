@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=./source
 set BUILDDIR=_build
-set SPHINXPROJ={{ cookiecutter.project_slug }}
+set SPHINXPROJ={{ cookiecutter.repo_name }}
 
 if "%1" == "" goto help
 

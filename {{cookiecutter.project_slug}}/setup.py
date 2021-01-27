@@ -24,20 +24,20 @@ with open('README.md') as readme_file:
 } %}
 
 setup(
-    name='{{ cookiecutter.project_slug.lower().replace(' ', '_').replace('-', '_')}}',
+    name='{{ cookiecutter.repo_name }}',
     version=version,
     description="{{ cookiecutter.project_short_description.replace('\"', '\\\"') }}",
     long_description=readme + '\n\n',
     author="{{ cookiecutter.full_name.replace('\"', '\\\"') }}",
     author_email='{{ cookiecutter.email }}',
-    url='https://github.com/{{ cookiecutter.github_organization }}/{{ cookiecutter.project_slug }}',
+    url='https://github.com/{{ cookiecutter.github_organization }}/{{ cookiecutter.repo_name }}',
     packages=find_packages(),
     include_package_data=True,  # check MANIFEST.in
 {%- if cookiecutter.open_source_license in license_classifiers %}
     license="{{ cookiecutter.open_source_license }}",
 {%- endif %}
     zip_safe=False,
-    keywords='{{ cookiecutter.project_slug }}',
+    keywords='{{ cookiecutter.repo_name }}',
     classifiers=[ #check details https://pypi.org/classifiers/
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',

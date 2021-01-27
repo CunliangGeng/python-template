@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""Tests for the {{ cookiecutter.project_slug.lower().replace(' ', '_').replace('-', '_')}} module.
+"""Tests for the {{ cookiecutter.module_name.lower().replace(' ', '_').replace('-', '_')}} module.
 """
 import pytest
 
-from {{ cookiecutter.project_slug.lower().replace(' ', '_').replace('-', '_')}} import {{ cookiecutter.project_slug.lower().replace(' ', '_').replace('-', '_')}}
+from {{ cookiecutter.module_name.lower().replace(' ', '_').replace('-', '_')}} import {{ cookiecutter.module_name.lower().replace(' ', '_').replace('-', '_')}}
 
 
 def test_something():
@@ -24,5 +24,5 @@ def an_object():
     return {}
 
 
-def test_{{ cookiecutter.project_slug.lower().replace(' ', '_').replace('-', '_')}}(an_object):
+def test_{{ cookiecutter.module_name.lower().replace(' ', '_').replace('-', '_')}}(an_object):
     assert an_object == {}

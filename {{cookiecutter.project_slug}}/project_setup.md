@@ -18,7 +18,7 @@ We recommend using [git](http://git-scm.com/) and
 [github](https://github.com/).
 
 ``` {.sourceCode .console}
-cd {{ cookiecutter.project_slug }}
+cd {{ cookiecutter.repo_name }}
 git init
 git add -A
 git commit
@@ -139,7 +139,7 @@ Package version number
 -   We recommend using [semantic
     versioning](https://guide.esciencecenter.nl/best_practices/releases.html#semantic-versioning).
 -   For convenience, the package version is stored in a single place:
-    `{{ cookiecutter.project_slug }}/__version__.py`. For updating the
+    `{{ cookiecutter.module_name }}/__version__.py`. For updating the
     version number, you only have to change this file.
 -   Don't forget to update the version number before [making a
     release](https://guide.esciencecenter.nl/best_practices/releases.html)!

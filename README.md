@@ -12,14 +12,14 @@ Use this [Cookiecutter](https://cookiecutter.readthedocs.io) template to generat
 an empty Python package. Features include:
 
 - Boilerplate tests and documentation,
-- [Python setup configuration]({{cookiecutter.project_slug}}/setup.py),
+- [Python setup configuration]({{cookiecutter.module_name}}/setup.py),
 - Open source software license,
-- [Default Github actions]({{cookiecutter.project_slug}}/.github/workflows) for building, testing and deployment
+- [Default Github actions]({{cookiecutter.module_name}}/.github/workflows) for building, testing and deployment
 
 - Code style checking,
-- [Editorconfig]({{cookiecutter.project_slug}}/.editorconfig),
-- Miscellaneous files, such as [Change log]({{cookiecutter.project_slug}}/CHANGELOG.rst), [Code of Conduct]({{cookiecutter.project_slug}}/CODE_OF_CONDUCT.rst), and [Contributing guidelines]({{cookiecutter.project_slug}}/CONTRIBUTING.rst),
-- A [README]({{cookiecutter.project_slug}}/README.md) and [a separate document]({{cookiecutter.project_slug}}/project_setup.md) with extensive documentation about project setup.
+- [Editorconfig]({{cookiecutter.module_name}}/.editorconfig),
+- Miscellaneous files, such as [Change log]({{cookiecutter.module_name}}/CHANGELOG.rst), [Code of Conduct]({{cookiecutter.module_name}}/CODE_OF_CONDUCT.rst), and [Contributing guidelines]({{cookiecutter.module_name}}/CONTRIBUTING.rst),
+- A [README]({{cookiecutter.module_name}}/README.md) and [a separate document]({{cookiecutter.module_name}}/project_setup.md) with extensive documentation about project setup.
 
 The file structure of the generated package looks like:
 
@@ -62,7 +62,7 @@ path/to/package/
 * Code (existing or new) should be placed in `path/to/package/package/` (please choose a better name for your software!).
 * Add documentation by editing `path/to/package/docs/index.rst`
 * Tests go in the `path/to/package/tests/` directory
-* The generated [project setup document]({{cookiecutter.project_slug}}/project_setup.md) contains extensive documentation about the project setup and provides further instructions on what to do.
+* The generated [project setup document]({{cookiecutter.module_name}}/project_setup.md) contains extensive documentation about the project setup and provides further instructions on what to do.
 
 ## How to use
 
@@ -99,14 +99,14 @@ You will be asked to supply the following information:
 
 | Name                      | Default value | Explanation |
 | ------------------------- | ------------- | ----------- |
-| project_name              | My Python Project  | Full project/package name.  |
-| project_slug              | my_python_project  | This will be the name of the directory to be created and the git repository. It is safest not to use dashes (-) or spaces in this name. |
+| repo_name                 | Repo-and-package-name | The git repo name and pypi package name |
+| module_name               | import_module_name | The top module name for import. It is safest not to use dashes (-) or spaces in this name. |
 | project_short_description |   | The information that you enter here will end up in the README, documentation, license, and setup.py, so it may be a good idea to prepare something in advance. |
 | version                   | 0.1.0  |   |
 | github_organization       |   | GitHub organization that will contain this project's repository. This can also be your github user name. |
 | open_source_license       | Apache 2.0 (1)  | The software license under which the code is made available.  |
 | apidoc                    | no (1)  | Add support for automatically generating a module index from the `docstrings` in your Python package (look at the [scriptcwl package](http://scriptcwl.readthedocs.io/en/latest/apidocs/scriptcwl.html) for an example). |
-| pypi_user                 | no_travis_pypi_deployment | If you want to deploy your package via travis to pypi when you make a release, specify your pypi user name. If not, use the default value. Please note that if you are using this option, some additional configuration is required. The [README]({{cookiecutter.project_slug}}/README.md) of the generated package explains what to do. |
+| pypi_user                 | no_travis_pypi_deployment | If you want to deploy your package via travis to pypi when you make a release, specify your pypi user name. If not, use the default value. Please note that if you are using this option, some additional configuration is required. The [README]({{cookiecutter.module_name}}/README.md) of the generated package explains what to do. |
 | full_name                 | John Smith  | Your full name, e.g. _John Smith_.   |
 | email                     | yourname@esciencecenter.nl | Your (work) email address  |
 | copyright_holder          |   | Name(s) of the organization(s) or person(s) who hold the copyright of the software (e.g., Netherlands eScience Center).  |
