@@ -5,7 +5,7 @@
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 SPHINXPROJ    = {{ cookiecutter.project_slug }}
-SOURCEDIR     = .
+SOURCEDIR     = ./source
 BUILDDIR      = _build
 
 # Put it first so that "make" without argument is like "make help".
@@ -18,12 +18,5 @@ help:
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
 	@cd source
+	if [ -d $(BUILDDIR) ]; then rm -r $(BUILDDIR); fi
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
-
-clean:
-	rm -f source/decoy.db
-	rm -fr source/api
-	rm -fr source/_build
-
-check:
-	open source/_build/html/index.html

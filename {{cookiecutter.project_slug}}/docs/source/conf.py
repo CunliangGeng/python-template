@@ -90,6 +90,10 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
 
+# The reST default role (used for this markup: `text`) to use for all
+# documents.
+default_role = 'any'  # makes single backticks autofind targets
+
 {% if cookiecutter.apidoc == 'yes' %}
 # -- Run apidoc plug-in manually, as readthedocs doesn't support it -------
 # See https://github.com/rtfd/readthedocs.org/issues/1139
@@ -161,6 +165,7 @@ ipython_warning_is_error = False
 ipython_execlines = [
     "import numpy as np",
 ]
+ipython_savefig_dir = '../_build/ipython_savefig'
 
 
 # -- Options for HTML output ----------------------------------------------
@@ -193,10 +198,8 @@ html_context = {
 # This is required for the alabaster theme
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
 html_sidebars = {
-    '**': [
-        'relations.html',  # needs 'show_related': True theme option to display
-        'searchbox.html',
-    ]
+    '**': ['globaltoc.html', 'relations.html', 'searchbox.html'] ,
+    'index': ['globaltoc.html', 'searchbox.html']
 }
 
 

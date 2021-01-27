@@ -54,9 +54,7 @@ setup(
     ],
     install_requires=[],  # FIXME: add your package's dependencies to this list
     extras_require={
-        'dev': ['prospector[with_pyroma]', 'autopep8', 'isort', 'twine'],
-        'doc': ['sphinx', 'ipython'],
-        'test': ['pytest', 'pytest-cov', 'pytest-runner', 'pycodestyle',
-                'coverage', 'codacy-coverage', 'coveralls'],
+        'tests': ['pytest', 'pytest-cov', 'coveralls'],
+        'docs': ['Sphinx', 'ipython']
     }
 )

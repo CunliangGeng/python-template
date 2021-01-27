@@ -1,2 +1,5 @@
-This product includes {{ cookiecutter.project_name }}, software developed by
-{{ cookiecutter.copyright_holder }}.
+{{ cookiecutter.project_name }}
+Copyright [year-year] {{ cookiecutter.copyright_holder }}
+
+This product includes software developed at
+{{ cookiecutter.copyright_holder }}
